@@ -1,0 +1,33 @@
+{
+  "name": "pomoblock-backend",
+  "version": "1.0.0",
+  "description": "ExpressJS backend on Vercel for iOS in-app update enforcement. Verifies App Store Connect webhooks to detect new releases, persists version state to a database, and serves a /api/config endpoint so mobile clients can determine whether a force or flexible update is required.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "firebase-admin": "^13.10.0",
+    "jsonwebtoken": "^9.0.3",
+    "jwks-rsa": "^4.0.1",
+    "semver": "^7.8.1",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.11.0",
+    "@types/semver": "^7.5.6",
+    "@types/swagger-ui-express": "^4.1.8",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=22.x"
+  }
+}
